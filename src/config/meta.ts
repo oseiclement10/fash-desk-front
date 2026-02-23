@@ -1,9 +1,9 @@
 export const appConfig = {
-    name: "Archy's Fashion",
-    fullName: "Archy's Fashion",
+    name: "Fashion Desk",
+    fullName: "Fashion Desk",
     tagline: "Luxury Fashion House",
-    website: "www.bethelfashion.online",
-    email: "info@archysfashion.com",
+    website: "https://fashion-desk.bethelfashion.online",
+    email: "clementoseiasante@gmail.com",
     adminContact: "233541201207",
     managerContact: "233541201207",
 };

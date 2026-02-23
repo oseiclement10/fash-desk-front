@@ -77,7 +77,7 @@ export default function QuickLinks() {
     return (
         <section className="mb-8">
             <div className="flex items-center gap-2.5 mb-6">
-                <div className="p-2 rounded-xl bg-slate-900 text-white shadow-lg ring-1 ring-white/10">
+                <div className="p-2 rounded-xl bg-primary text-primary-foreground shadow-lg ring-1 ring-white/10">
                     <LayoutDashboard className="w-5 h-5" />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ export default function QuickLinks() {
                     >
                         <Link
                             to={link.path}
-                            className={`group relative flex flex-col items-center p-5 rounded-[2rem] bg-primary-foreground shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] border border-white/5 ${link.hoverGlow}`}
+                            className={`group relative flex flex-col items-center p-5 rounded-[2rem] bg-primary-foreground shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] border border-gray-200 ${link.hoverGlow}`}
                         >
                             {/* Accent Light (Differentiated by color) */}
                             <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 blur-md opacity-50 group-hover:opacity-100 transition-opacity ${link.iconColor.replace('text-', 'bg-')}`} />
@@ -109,7 +109,7 @@ export default function QuickLinks() {
                                 <link.icon className={`w-6 h-6 ${link.iconColor} filter drop-shadow-[0_0_8px_rgba(current-color,0.5)]`} />
                             </div>
 
-                            <span className="text-sm  text-white uppercase group-hover:text-primary transition-colors text-center leading-tight">
+                            <span className="text-sm font-medium text-primary uppercase group-hover:text-primary transition-colors text-center leading-tight">
                                 {link.label}
                             </span>
 

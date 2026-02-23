@@ -43,7 +43,6 @@ const LoginPage: React.FC = () => {
         <div className="min-h-screen bg-[#0F172A] lg:bg-linear-to-br lg:from-gray-50 lg:to-gray-100 flex items-center justify-center p-4 font-poppins">
             <div className="w-full max-w-6xl flex rounded-3xl overflow-hidden shadow-2xl bg-white">
 
-                {/* LEFT – BRAND STORY (Hidden on small screens) */}
                 <div className="hidden lg:flex lg:w-1/2 relative bg-linear-to-br from-[#020617] via-[#0F172A] to-[#020617] p-12 text-white overflow-hidden">
                     <div className="absolute inset-0 opacity-10">
                         <div className="absolute -top-32 -left-32 w-72 h-72 bg-[#C9A24D] rounded-full" />
@@ -51,25 +50,29 @@ const LoginPage: React.FC = () => {
                     </div>
 
                     <div className="relative z-10 flex flex-col justify-between h-full">
+
+                        {/* Brand Header */}
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                             className="flex items-center gap-4"
                         >
-                            <div className="w-14 h-14 bg-linear-to-br from-[#000000] to-[#0a0700] rounded-xl flex items-center justify-center shadow-lg">
-                                <LogoImg className='w-64' />
+                            <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center shadow-lg">
+                                <LogoImg className="w-10" />
                             </div>
+
                             <div>
                                 <h1 className="text-2xl font-bold tracking-wide">
                                     {appConfig.name}
                                 </h1>
-                                <p className="text-sm text-[#F5E6C8]">
-                                    {appConfig.tagline}
+                                <p className="text-sm text-primary">
+                                    Fashion  Management System
                                 </p>
                             </div>
                         </motion.div>
 
+                        {/* Hero Message */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -77,33 +80,42 @@ const LoginPage: React.FC = () => {
                             className="mt-20"
                         >
                             <h2 className="text-5xl font-extrabold leading-tight mb-6">
-                                Crafted With <br />
-                                <span className="text-transparent bg-clip-text bg-linear-to-r from-[#F5E6C8] to-[#C9A24D]">
-                                    Elegance & Precision
+                                Manage Your <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+                                    Fashion Business Seamlessly
                                 </span>
                             </h2>
+
                             <p className="text-gray-300 text-lg max-w-lg">
-                                Every {appConfig.name} piece reflects refined craftsmanship,
-                                premium materials, and timeless design.
+                                Streamline operations, track production, manage clients,
+                                and gain real-time insights — all from one powerful dashboard.
                             </p>
                         </motion.div>
 
+                        {/* Core Features */}
                         <div className="space-y-4 mt-12">
                             {[
-                                'Bespoke craftsmanship',
-                                'Luxury fabrics',
-                                'Tailored perfection',
-                                'Designed for distinction',
+                                'Client & Order Management',
+                                'Measurement & Tailoring Records',
+                                'Production Workflow Monitoring',
+                                'Sales & Revenue Reports',
                             ].map((item) => (
                                 <div key={item} className="flex items-center gap-3">
-                                    <span className="w-2 h-2 bg-[#C9A24D] rounded-full" />
+                                    <span className="w-2 h-2 bg-primary/80 rounded-full" />
                                     <span className="text-gray-300">{item}</span>
                                 </div>
                             ))}
                         </div>
 
+                        {/* Footer */}
                         <div className="pt-8 border-t border-white/10 text-sm text-gray-400">
-                            © {new Date().getFullYear()} {appConfig.name} | <a className=' text-secondary  text-[10px]' href="https://oactechhub.com">BY OAC TECH HUB</a>
+                            © {new Date().getFullYear()} {appConfig.name} |{' '}
+                            <a
+                                className="text-secondary text-[10px]"
+                                href="https://oactechhub.com"
+                            >
+                                BY OAC TECH HUB
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -112,8 +124,8 @@ const LoginPage: React.FC = () => {
                 <div className="w-full lg:w-1/2 p-8 lg:p-12 flex items-center justify-center">
                     <div className="w-full max-w-md">
                         <div className="text-center mb-10">
-                            <div className=" hidden  lg:inline-flex items-center justify-center w-16 h-16 bg-[#F5E6C8] rounded-2xl mb-6">
-                                <Lock className="w-8 h-8 text-[#A8842C]" />
+                            <div className=" hidden  lg:inline-flex items-center justify-center w-16 h-16 bg-primary/15 rounded-2xl mb-6">
+                                <Lock className="w-8 h-8 text-secondary" />
                             </div>
                             <div className="w-14 lg:hidden h-14 bg-linear-to-br from-[#000000] to-[#0a0700] rounded-xl flex items-center justify-center shadow-lg">
                                 <LogoImg className='w-64' />
@@ -189,8 +201,8 @@ const LoginPage: React.FC = () => {
     flex items-center justify-center gap-3
     transition-all duration-300
     ${isPending
-                                            ? 'bg-black text-amber-300 cursor-not-allowed'
-                                            : 'bg-black text-amber-300 cursor-pointer hover:shadow-lg hover:shadow-[#F5E6C8] hover:scale-[1.01] active:scale-[0.98]'
+                                            ? 'bg-secondary text-primary-foreground cursor-not-allowed'
+                                            : 'bg-secondary text-primary-foreground cursor-pointer hover:shadow-lg hover:shadow-[#F5E6C8] hover:scale-[1.01] active:scale-[0.98]'
                                         }
   `}
                                 >
@@ -199,7 +211,7 @@ const LoginPage: React.FC = () => {
                                             size="small"
                                             indicator={
                                                 <LoadingOutlined
-                                                    className="!text-amber-300"
+                                                    className="!text-primary-foreground"
                                                     spin
                                                 />
                                             }
@@ -214,9 +226,9 @@ const LoginPage: React.FC = () => {
                             </Form>
                         </FormConfig>
 
-                        <div className="mt-8 p-4 rounded-xl bg-[#F5E6C8]/40 border border-[#C9A24D]/30">
+                        <div className="mt-8 p-4 rounded-xl bg-primary/30 border border-primary/60">
                             <div className="flex gap-3">
-                                <Shield className="w-5 h-5 text-[#A8842C]" />
+                                <Shield className="w-5 h-5 text-primary" />
                                 <p className="text-sm text-gray-700">
                                     Secure, encrypted access to {appConfig.name} systems.
                                 </p>

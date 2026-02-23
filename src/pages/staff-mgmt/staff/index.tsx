@@ -79,9 +79,9 @@ const Users = () => {
         <StatCardSmall
           label="Active Staff"
           value={usersResponse?.statistics?.active_users || 0}
-          bgColor="bg-primary-foreground"
+          bgColor="bg-primary"
           textColor="text-white"
-          extra={<FaUsers size={18} className="text-primary-foreground" />}
+          extra={<FaUsers size={18} className="text-primary" />}
           loading={isLoading}
         />
 

@@ -40,16 +40,16 @@ const Sidebar = ({ onItemClick }: SidebarProps) => {
     return (
         <div className={`w-56 h-full transition-all duration-300 ease-in-out bg-white/80 backdrop-blur-xl ${onItemClick ? 'border-r-0' : 'border-r border-gray-200'}`}>
             {!onItemClick && (
-                <div className="h-18 flex items-center px-5 border-b border-gray-100">
+                <div className="h-18 flex items-center px-5 ">
                     <div className="flex items-center gap-3">
-                        <div className="w-12  h-12 bg-linear-to-br from-[#000000] to-[#0a0700] rounded-xl flex items-center justify-center shadow-lg">
+                        <div className="w-12  h-12   rounded-xl flex items-center justify-center shadow-lg">
                             <LogoImg className='w-32' />
                         </div>
                         <div>
-                            <h1 className="text-xl font-bold bg-linear-to-r from-black to-foreground bg-clip-text text-transparent">
+                            <h1 className=" font-bold bg-linear-to-r from-black to-foreground bg-clip-text text-transparent">
                                 {appConfig.name}
                             </h1>
-                            <p className="text-xs text-gray-700">{appConfig.tagline}</p>
+                            <p className="text-xs -mt-0.5 text-gray-700">{appConfig.tagline}</p>
                         </div>
                     </div>
                 </div>

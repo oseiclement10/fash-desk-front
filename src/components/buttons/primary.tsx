@@ -21,9 +21,9 @@ const PrimaryButton = ({
     asLink = "",
 }: CommonButtonProps) => {
 
-    const stying = clsx(`rounded-sm cursor-pointer flex items-center justify-center transition-smooth text-base shadow-sm bg-gradient-to-br from-primary-foreground via-primary-foreground/90 to-primary-foreground text-white px-4 py-2  ${className}`, {
+    const stying = clsx(`rounded-sm cursor-pointer flex items-center justify-center transition-smooth text-base shadow-sm bg-gradient-to-br from-primary via-secondary to-primary text-white px-4 py-2 hover:from-secondary hover:via-primary transition-colors hover:to-primary ${className}`, {
         "opacity-75 hover:opacity-60": loading,
-        " hover:bg-secondary": !(loading || disabled),
+        "hover:bg-secondary": !(loading || disabled),
         "!cursor-not-allowed !bg-gray-400 ": disabled,
         "active:opacity-20 active:scale-90": !(disabled || loading),
     });

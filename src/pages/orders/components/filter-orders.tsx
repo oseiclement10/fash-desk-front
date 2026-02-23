@@ -33,7 +33,7 @@ const FilterOrders = ({ filter, active, counts, total }: FilterOrdersProps) => {
                     key={elem.key}
                     onClick={() => filter(elem.key)}
                     className={`px-4 py-1 min-w-fit text-sm capitalize  rounded-md  ${active == elem.key
-                        ? "bg-primary-foreground border-none text-white"
+                        ? "bg-primary border-none text-white"
                         : "border-slate-300 border text-gray-900 hover:bg-slate-100"
                         } `}
                 >

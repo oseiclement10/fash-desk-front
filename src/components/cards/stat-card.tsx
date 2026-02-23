@@ -11,7 +11,7 @@ export const StatCard: React.FC<{
     extra?: React.ReactNode;
 }> = ({ title, value, isAlt = false, isSmall = false, isLoading = false, icon, extra, trend }) => (
     <div
-        className={`${isAlt ? "bg-primary-foreground border-primary-foreground" : "bg-white border-gray-100"
+        className={`${isAlt ? "bg-primary border-primary" : "bg-white border-gray-100"
             } rounded-xl flex flex-col justify-between shadow-sm border p-6 hover:shadow-md transition-shadow`}
     >
         <div className="flex items-center justify-between ">
@@ -49,7 +49,7 @@ export const StatCard: React.FC<{
             </div>
 
             <div
-                className={`p-3 rounded-lg ${isAlt ? "bg-secondary" : "bg-blue-100/80"
+                className={`p-3 rounded-lg ${isAlt ? "bg-primary-foreground/30" : "bg-primary/20"
                     } flex items-center justify-center`}
             >
                 {isLoading ? (
@@ -83,13 +83,13 @@ export const StatCardSmall = ({
     extra,
 }: StatCardProps) => {
     return (
-        <div className={`px-6 ${bgColor} ${textColor} shadow-sm font-poppins rounded-lg py-5 space-x-4 flex items-center`}>
+        <div className={`px-6 ${bgColor} ${textColor} border-t border-gray-200 shadow-sm font-poppins rounded-lg py-5 space-x-4 flex items-center`}>
             <div className="w-10 h-10 flex items-center justify-center bg-white/90 shadow-sm rounded-md">
                 {extra}
             </div>
             <div className="">
                 <h4 className="text-sm">{label}</h4>
-                <h2 className="font-semibold text-lg ">{value}</h2>
+                <h2 className="font-semibold text-lg ">{value} </h2>
             </div>
         </div>
     )

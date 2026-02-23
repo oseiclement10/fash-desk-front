@@ -48,133 +48,96 @@
 
 :root {
   --radius: 0.625rem;
-
   /* Core Surfaces */
-  --background: oklch(0.99 0.01 95);
-  /* Ivory */
-  --foreground: oklch(0.23 0.02 260);
-  /* Deep charcoal */
-
-  --card: oklch(0.995 0.005 95);
+  --background: oklch(0.98 0.008 160);
+  /* Soft mint-white */
+  --foreground: oklch(0.18 0.03 175);
+  /* Deep emerald-charcoal */
+  --card: oklch(0.99 0.005 160);
   --card-foreground: var(--foreground);
-
   --popover: var(--card);
   --popover-foreground: var(--foreground);
-
-  /* Brand Gold */
-  --primary: oklch(0.72 0.12 85);
-  /* Gold */
-  --primary-foreground: oklch(0.15 0.02 260);
-
-  --secondary: oklch(0.62 0.1 85);
-  /* Dark gold */
+  --primary: oklch(0.55 0.15 160);
+  
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.45 0.12 160);
+  /* Deep emerald */
   --secondary-foreground: oklch(0.98 0 0);
-
   /* Muted / Accents */
-  --muted: oklch(0.95 0.03 90);
-  --muted-foreground: oklch(0.45 0.02 260);
-
-  --accent: oklch(0.85 0.08 88);
-  --accent-foreground: oklch(0.18 0.02 260);
-
+  --muted: oklch(0.93 0.03 155);
+  --muted-foreground: oklch(0.45 0.03 165);
+  --accent: oklch(0.80 0.09 158);
+  --accent-foreground: oklch(0.15 0.03 175);
   --destructive: oklch(0.58 0.22 27);
-
   /* Borders & Inputs */
-  --border: oklch(0.88 0.05 90);
+  --border: oklch(0.85 0.06 158);
   --input: var(--border);
-  --ring: oklch(0.72 0.12 85);
-
-  /* Charts – Gold spectrum */
-  --chart-1: oklch(0.72 0.12 85);
-  --chart-2: oklch(0.62 0.1 85);
-  --chart-3: oklch(0.82 0.08 88);
-  --chart-4: oklch(0.55 0.09 82);
-  --chart-5: oklch(0.9 0.05 92);
-
+  --ring: oklch(0.55 0.15 160);
+  /* Charts – Emerald spectrum */
+  --chart-1: oklch(0.55 0.15 160);
+  --chart-2: oklch(0.45 0.12 160);
+  --chart-3: oklch(0.70 0.10 162);
+  --chart-4: oklch(0.38 0.11 158);
+  --chart-5: oklch(0.82 0.06 165);
   /* Sidebar */
-  --sidebar: oklch(0.985 0.01 95);
+  --sidebar: oklch(0.965 0.01 160);
   --sidebar-foreground: var(--foreground);
-
   --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: var(--primary-foreground);
-
   --sidebar-accent: var(--accent);
   --sidebar-accent-foreground: var(--accent-foreground);
-
   --sidebar-border: var(--border);
   --sidebar-ring: var(--ring);
 }
 
-
 .dark {
-  --background: oklch(0.12 0.01 260);
+  --background: oklch(0.11 0.015 175);
   --foreground: oklch(0.96 0 0);
-
-  --card: oklch(0.18 0.01 260);
+  --card: oklch(0.17 0.02 170);
   --card-foreground: var(--foreground);
-
   --popover: var(--card);
   --popover-foreground: var(--foreground);
 
-  /* Gold on Black */
-  --primary: oklch(0.78 0.13 85);
-  --primary-foreground: oklch(0.12 0.01 260);
-
-  --secondary: oklch(0.45 0.08 85);
+  --primary: oklch(0.65 0.17 160);
+  --primary-foreground: oklch(0.10 0.02 175);
+  --secondary: oklch(0.35 0.10 162);
   --secondary-foreground: oklch(0.96 0 0);
-
-  --muted: oklch(0.25 0.02 260);
-  --muted-foreground: oklch(0.65 0.02 260);
-
-  --accent: oklch(0.6 0.1 85);
-  --accent-foreground: oklch(0.98 0 0);
-
+  --muted: oklch(0.23 0.025 170);
+  --muted-foreground: oklch(0.62 0.03 165);
+  --accent: oklch(0.48 0.14 160);
+  --accent-foreground: oklch(0.97 0 0);
   --destructive: oklch(0.7 0.18 25);
-
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.78 0.13 85);
-
-  /* Charts */
-  --chart-1: oklch(0.78 0.13 85);
-  --chart-2: oklch(0.65 0.1 85);
-  --chart-3: oklch(0.85 0.07 90);
-  --chart-4: oklch(0.55 0.12 80);
-  --chart-5: oklch(0.9 0.05 95);
-
-  /* Sidebar */
-  --sidebar: oklch(0.18 0.01 260);
+  --ring: oklch(0.65 0.17 160);
+  --chart-1: oklch(0.65 0.17 160);
+  --chart-2: oklch(0.52 0.13 160);
+  --chart-3: oklch(0.75 0.10 163);
+  --chart-4: oklch(0.43 0.14 157);
+  --chart-5: oklch(0.85 0.06 168);
+  --sidebar: oklch(0.17 0.02 170);
   --sidebar-foreground: var(--foreground);
-
   --sidebar-primary: var(--primary);
   --sidebar-primary-foreground: var(--primary-foreground);
-
   --sidebar-accent: var(--accent);
   --sidebar-accent-foreground: var(--accent-foreground);
-
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: var(--ring);
 }
 
-
-/* ============================================================
-   BRAND CONFIG — Edit these values per client deployment.
-   All colour references across the app resolve from here.
-   ============================================================ */
 .theme-fashion {
-  --primary:            #C9A24D;  /* Primary accent (rich gold) */
-  --primary-foreground: #1A1A1A;  /* Text on primary (deep charcoal) */
+  --primary: #047857;
+  --primary-foreground: #FFFFFF;
 
-  --secondary:            #A8842C; /* Secondary accent (dark antique gold) */
-  --secondary-foreground: #FFFFFF; /* Text on secondary */
+  --secondary: #065F46;
+  --secondary-foreground: #ECFDF5;
 
-  --background: #FFFCF5; /* Page background (warm ivory) */
-  --foreground: #1F2933; /* Body text (deep navy-charcoal) */
+  --background: #F0FDF4;
+  --foreground: #1F2937;
 
-  --border: #E6D3A3;     /* Component borders (soft gold) */
-  --muted:  #F5E6C8;     /* Muted bg / highlights (pale champagne) */
+  --border: #A7F3D0;
+  --muted: #D1FAE5;
 }
-
 
 @layer base {
   * {

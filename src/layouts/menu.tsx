@@ -100,11 +100,11 @@ export const MenuItemAlt = ({ label, Icon, path, isVisible = true, onClick }: Om
         <>
             <NavLink to={path} onClick={() => handleClick()}
                 className={`w-full flex items-center gap-4 px-4 py-[7px] text-sm rounded-lg transition-all duration-200 group ${isActive
-                    ? 'bg-gradient-to-r from-primary-foreground to-primary-foreground !text-white '
+                    ? 'bg-gradient-to-r from-primary to-secondary !text-white '
                     : '!text-gray-700  hover:!text-primary'
                     }`}
             >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-primary' : 'text-gray-600 group-hover:text-primary'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-primary-foreground' : 'text-gray-600 group-hover:text-primary'}`} />
                 <span className="-ml-[10px]">{label}</span>
                 {isActive && <ChevronRight className="w-2.5  ml-auto" />}
             </NavLink>

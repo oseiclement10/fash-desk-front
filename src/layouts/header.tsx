@@ -88,7 +88,7 @@ const Header = ({ onMenuClick, isMobile }: HeaderProps) => {
                 {/* Notifications */}
                 <button className="relative p-2 rounded-xl hover:bg-gray-100 transition-colors">
                     <Bell className="w-5 h-5 text-gray-600" />
-                    <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-linear-to-r from-red-500 to-amber-600 rounded-full animate-pulse"></div>
+                    <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-linear-to-r from-primary to-secondary rounded-full animate-pulse"></div>
                 </button>
 
                 {/* User Dropdown */}

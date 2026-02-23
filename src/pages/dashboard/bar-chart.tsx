@@ -20,14 +20,14 @@ const BarChart = ({ performance }: Pick<DashboardResponse["finance"], "performan
             {
                 label: "Inflows",
                 data: inflows,
-                borderColor: "#f3f4f2",
-                backgroundColor: "#C79E41",
+                borderColor: "#059669",
+                backgroundColor: "#059669",
             },
             {
                 label: "Outflows ",
                 data: outflows,
-                borderColor: "#000",
-                backgroundColor: "#000",
+                borderColor: "#DC2626",
+                backgroundColor: "#DC2626",
             },
         ],
     };

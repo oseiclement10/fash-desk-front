@@ -26,18 +26,18 @@ const UserDropdown = ({ user, items = [] }: UserDropdownProps) => {
             {/* Trigger Button */}
             <button
                 onClick={() => setOpen(!open)}
-                className="relative w-10 h-10 bg-linear-to-br from-primary-foreground via-primary-foreground/80 to-primary-foreground rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+                className="relative w-10 h-10 bg-linear-to-br from-primary via-secondary to-primary rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
             >
-                <User className="w-5 h-5 text-primary" />
+                <User className="w-5 h-5 text-primary-foreground" />
                 <ChevronDown
-                    className={`absolute -bottom-1 right-0 w-3 h-3 text-white transition-transform duration-200 ${open ? "rotate-180" : ""
+                    className={`absolute -bottom-1 right-0 w-3 h-3 text-primary-foreground transition-transform duration-200 ${open ? "rotate-180" : ""
                         }`}
                 />
             </button>
 
             {/* Dropdown Menu */}
             {open && (
-                <div className="absolute right-0 top-14 w-48 bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in-10 slide-in-from-top-2">
+                <div className="absolute right-0 top-14 w-48 bg-primary-foreground rounded-xl shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in-10 slide-in-from-top-2">
                     {items.map((item, i) => (
                         <button
                             key={i}
