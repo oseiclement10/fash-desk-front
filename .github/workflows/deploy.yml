@@ -21,6 +21,9 @@ jobs:
 
         - name: Build Project
           run: npm run build
+          env: 
+            VITE_REACT_APP_PROD_BASE_URL: ${{ secrets.VITE_REACT_APP_PROD_BASE_URL }}
+            VITE_REACT_APP_TEST_BASE_URL: ${{ secrets.VITE_REACT_APP_TEST_BASE_URL }}
 
         - name: Deploy To Cpanel 
           uses: Samkirkland/FTP-Deploy-Action@v4.3.5
